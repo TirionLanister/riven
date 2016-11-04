@@ -1,8 +1,7 @@
 #include "riven.h"
 #include<iostream>
-#include<cmath>
 
-using namespace std;
+
  riven::riven()
 {
 
@@ -32,9 +31,11 @@ void riven::setData(double x, double y, double z) {
     Z = z;
 }
 
-
-
-std::ostream&  operator<<(std::ostream& out, const riven obj) {
+void informationAlerts(riven val) {
+    std::cout << val << std::endl;
+}
+std::ostream&  operator<<(std::ostream& out, const riven obj) 
+{
     std::cout << "X=\t" << obj.X << "\nY =\t" << obj.Y << "\nZ =\t" << obj.Z << "\nW =\t" << obj.V << std::endl;
     return out;
 }
